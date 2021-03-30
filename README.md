@@ -54,7 +54,4 @@ pygame.event.get() approach in the main game loop to check if that event has be 
 
 
 ## Death
-This is simple. Do not hit yourself or a wall. 
-
-
-        # self.body = [Vector2(7, 10), Vector2(6, 10), Vector2(5, 10)]
+This is simple. Do not hit yourself or a wall.
