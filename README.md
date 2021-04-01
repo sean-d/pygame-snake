@@ -2,6 +2,13 @@
 
 This is an attempt at the classic game snake. 
 
+## Install
+This was made with Python 3.8, so any deviation above/below and YMMV.
+
+1. Create virtual env
+2. install requirements.txt into activated venv from step 1.
+3. run game.py and enjoy
+
 ## Logic of the game
 We will be moving around in a grid more or less. This is due to the only allowing movement after so many pixels
 and because of that, it will act like a grid.
@@ -27,8 +34,7 @@ Class-based. This will determine x/y position on the board, which will be random
 ### Consuming 
 When the head of the snake is on the same space as the fruit, the snake_eats_fruit method will reposition the fruit (basically eating it and then placing a new one)
 and add a length to the snake. The extension will be added to the tail and not the head. This is so if the fruit is at the edge of the board and you eat it, the new
-head won't instantly be out of bounds. There is no way to cleanly add to the tail so there are times it will look disjointed. I rather a bad look than a poor function. 
-additionally, this will add to the score.
+head won't instantly be out of bounds. Additionally, this will add to the score.
 
 ## Snake
 This will work like the fruit except that we will store and draw multiple vectors vs. a single vector.
@@ -55,3 +61,8 @@ pygame.event.get() approach in the main game loop to check if that event has be 
 
 ## Death
 This is simple. Do not hit yourself or a wall.
+
+## Graphics
+### Fruit
+The fruit will be its own surface that is the apple.png file. To ensure that pygame can work with the image without issue, we will convert_alpha() it.
+Once the surface for the fruit is made, we will draw on 
